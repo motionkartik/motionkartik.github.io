@@ -1417,13 +1417,53 @@ canvas {
   margin-right: 12px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991px) {.st-contact-info-wrap {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.st-single-contact-info {
+  display: inline-block;
+  text-align: left; /* This ensures that the text within each contact info block is left-aligned */
+  margin: 10px;
+}.st-contact-info-wrap {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.st-single-contact-info {
+  display: inline-block;
+  text-align: left; /* This ensures that the text within each contact info block is left-aligned */
+  margin: 10px;
+}
   .st-btn.st-style1,
   .st-btn.st-style2 {
     font-size: 14px;
     padding: 0.72em 1.8em;
   }
+  
 }
+
+.st-contact-info-wrap {
+  display: flex;
+  flex-direction: column; /* Keeps the elements stacked vertically */
+  align-items: center; /* Centers the elements within the container */
+  margin: 0 auto; /* Centers the container itself */
+}
+
+.st-single-contact-info {
+  display: flex;
+  align-items: center; /* Aligns icon and text vertically */
+  text-align: center; /* Centers the text within each contact info block */
+  margin: 10px;
+}
+
+.st-single-info-details {
+  text-align: left; /* Aligns text within each detail block */
+  margin-left: 10px; /* Adds space between icon and text */
+}
+
+
 
 /*--------------------------------------------------------------
 9. Section Heading
