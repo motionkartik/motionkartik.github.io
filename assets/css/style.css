@@ -982,9 +982,9 @@ hr {
   background-color: #101624;
   border: 1px solid #232935;
   border-right: 0;
-  border-radius: 50px 0 0 50px;
+  border-radius: 50px 50px 50px 50px;
   height: 80px;
-  width: 448px;
+  width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -993,8 +993,8 @@ hr {
           align-items: center;
   position: absolute;
   bottom: 30px;
-  padding-left: 12px;
   right: 100%;
+  justify-content: center;
 }
 
 .st-hero.st-style2 {
@@ -1446,9 +1446,12 @@ canvas {
 
 .st-contact-info-wrap {
   display: flex;
-  flex-direction: column; /* Keeps the elements stacked vertically */
-  align-items: center; /* Centers the elements within the container */
-  margin: 0 auto; /* Centers the container itself */
+      flex-direction: column;
+      align-items: baseline;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-evenly;
 }
 
 .st-single-contact-info {
@@ -1462,6 +1465,7 @@ canvas {
   text-align: left; /* Aligns text within each detail block */
   margin-left: 10px; /* Adds space between icon and text */
 }
+
 
 
 
