@@ -1897,9 +1897,9 @@ body .body-overlay {
 
 #experience-counter {
     display: inline-block;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 400;
-    color: #FFE401;
+    color: #bfbfbf;
     margin-left: 12px;
     vertical-align: middle;
     line-height: 1.5;
