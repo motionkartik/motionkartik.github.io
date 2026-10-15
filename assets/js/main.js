@@ -145,3 +145,66 @@ function scroll_animations() {
     });
 }
 scroll_animations();
+// Live Experience Counter
+$(function () {
+
+    // Experience start date: 1 February 2021
+    const startDate = new Date(2021, 1, 1, 0, 0, 0);
+
+    function updateExperience() {
+        const now = new Date();
+
+        let years = now.getFullYear() - startDate.getFullYear();
+        let months = now.getMonth() - startDate.getMonth();
+        let days = now.getDate() - startDate.getDate();
+        let hours = now.getHours() - startDate.getHours();
+        let minutes = now.getMinutes() - startDate.getMinutes();
+        let seconds = now.getSeconds() - startDate.getSeconds();
+
+        if (seconds < 0) {
+            seconds += 60;
+            minutes--;
+        }
+
+        if (minutes < 0) {
+            minutes += 60;
+            hours--;
+        }
+
+        if (hours < 0) {
+            hours += 24;
+            days--;
+        }
+
+        if (days < 0) {
+            days += new Date(
+                now.getFullYear(),
+                now.getMonth(),
+                0
+            ).getDate();
+
+            months--;
+        }
+
+        if (months < 0) {
+            months += 12;
+            years--;
+        }
+
+        const weeks = Math.floor(days / 7);
+        days = days % 7;
+
+        const experienceText =
+            `${years} years ${months} months ${weeks} weeks ` +
+            `${days} days ${hours} hours ${minutes} min ${seconds} s`;
+
+        $('#experience-counter').text(`(${experienceText})`);
+    }
+
+    // Update immediately
+    updateExperience();
+
+    // Update every second
+    setInterval(updateExperience, 1000);
+
+});

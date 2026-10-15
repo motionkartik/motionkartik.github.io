@@ -1894,3 +1894,22 @@ body .body-overlay {
 .global-color .setting-toggle i {
     animation: rotating 3s infinite linear !important;
 }
+
+#experience-counter {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 400;
+    color: #FFE401;
+    margin-left: 12px;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+    #experience-counter {
+        display: block;
+        font-size: 14px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
